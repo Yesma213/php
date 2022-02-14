@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<b>1 - Définir les variables superglobale. Expliquez comment ils fonctionnent. Donnez des exemples :  </b>
+<p>
+    <p>
+
+Plusieurs variables prédéfinies en PHP sont "superglobales", ce qui signifie qu'elles sont disponibles quel que soit le contexte du script. Il est inutile de faire global $variable; avant d'y accéder dans les fonctions ou les méthodes.
+<p>
+    <p>
+Exemple : $_SESSION["newsession"]=$value;
+- Les sessions permettent de conserver des variables sur toutes les pages de votre site. 
+<p>
+    <p>
+
+<b>2 - 2 Expliquez le principe d’un ORM. Donnez des exemples.</b>
+<p>
+    <p>
+ORM fournit la persistance transparente des objets PHP. C'est l'interface qui permet de faire le lien ou "mapping" entre les objets et les éléments de la base de données
+<p>
+    <p>
+Exemple : Si par exemple DBAL retourne dans la base de données une table "Article" avec 3 champs: "ID", "Titre" et "Contenu" et si l'application utilise un objet "Post" avec les attributs "ID", "Title" et "Content" (leur équivalent en anglais), ORM permettra très facilement de faire correspondre chaque attribut de l'objet Post au champ correspondant dans la table via un fichier de mapping (format YAML, XML ou annotations dans un fichier PHP). Ainsi, un enregistrement correspond à une instance (et vice versa) et une table correspond à une classe (ou entité).
+<p>
+    <p>
+        <b>3 Expliquez le principe du CRUD. Donnez des exemples.</b>
+        <p>
+            <p>
+                Le crud est le diminutif pour designer les opérations  : create, read, update, delete, qui sont les opérations courantes d’interactions entre un site (admin) et sa base de données.
+                <p>
+                    <p>
+<b>4 Expliquez le principe du MVC : Donnez des exemples.</b>
+<p>
+    <p>
+        Le pattern MVC permet de bien organiser son code source. Il va vous aider à savoir quels fichiers créer, mais surtout à définir leur rôle. Le but de MVC est justement de séparer la logique du code en trois parties que l'on retrouve dans des fichiers distincts.
+
+Modèle : cette partie gère les données de votre site. Son rôle est d'aller récupérer les informations « brutes » dans la base de données, de les organiser et de les assembler pour qu'elles puissent ensuite être traitées par le contrôleur. On y trouve donc entre autres les requêtes SQL.
+
+Vue : cette partie se concentre sur l'affichage. Elle ne fait presque aucun calcul et se contente de récupérer des variables pour savoir ce qu'elle doit afficher. On y trouve essentiellement du code HTML mais aussi quelques boucles et conditions PHP très simples, pour afficher par exemple une liste de messages.
+
+Contrôleur : cette partie gère la logique du code qui prend des décisions. C'est en quelque sorte l'intermédiaire entre le modèle et la vue : le contrôleur va demander au modèle les données, les analyser, prendre des décisions et renvoyer le texte à afficher à la vue. Le contrôleur contient exclusivement du PHP. C'est notamment lui qui détermine si le visiteur a le droit de voir la page ou non (gestion des droits d'accès).
+
+</body>
+</html>
